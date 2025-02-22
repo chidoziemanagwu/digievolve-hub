@@ -1,23 +1,26 @@
-'use client'
-
-import { useEffect, useState } from "react";
+// src/components/CountUp.tsx
+import { useState, useEffect } from "react";
 import { useMotionValue, animate } from "framer-motion";
 
-const CountUp = ({ value, suffix = "" }) => {
+interface CountUpProps {
+  value: number;
+  suffix?: string;
+}
+
+const CountUp = ({ value, suffix = "" }: CountUpProps) => {
   const [displayValue, setDisplayValue] = useState("0");
   const count = useMotionValue(0);
 
   useEffect(() => {
-    const controls = animate(count, value, {
+    const animation = animate(count, value, {
       duration: 2,
-      ease: "easeOut",
       onUpdate: (latest) => {
-        setDisplayValue(Math.round(latest).toLocaleString('en-US'));
+        setDisplayValue(Math.round(latest).toString());
       },
     });
 
-    return controls.stop;
-  }, [value, count]);
+    return animation.stop;
+  }, [count, value]);
 
   return <span>{displayValue}{suffix}</span>;
 };
