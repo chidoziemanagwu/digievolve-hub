@@ -15,7 +15,8 @@ interface CourseSection {
   modules: string[];
 }
 
-interface Program {
+// Remove unused interfaces and use a single type definition
+type ProgramType = {
   icon: IconType;
   title: string;
   description: string;
@@ -23,10 +24,11 @@ interface Program {
   courses: CourseSection[];
 }
 
-// Use the actual type from programData
-type TrainingPrograms = typeof trainingPrograms;
+type TrainingProgramsData = Record<string, ProgramType>;
 
 export default function TrainingProgramsPage() {
+  const programs = trainingPrograms as TrainingProgramsData;
+
   return (
     <RootLayout>
       {/* Hero Section */}
@@ -58,7 +60,7 @@ export default function TrainingProgramsPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(trainingPrograms).map(([slug, program]) => (
+            {Object.entries(programs).map(([slug, program]) => (
               <motion.div
                 key={slug}
                 initial={{ opacity: 0, y: 20 }}
