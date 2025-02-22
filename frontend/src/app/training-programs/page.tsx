@@ -16,13 +16,7 @@ type CourseSection = {
   // modules: string[];
 }
 
-type Program = {
-  icon: IconType;
-  title: string;
-  description: string;
-  duration: string;
-  courses: CourseSection[];
-}
+
 
 export default function TrainingProgramsPage() {
   // Remove the type assertion since we're using the actual type
