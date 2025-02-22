@@ -9,14 +9,14 @@ import { FaGraduationCap, FaLaptopCode } from 'react-icons/fa'
 import { trainingPrograms } from './[slug]/programData'
 import { IconType } from 'react-icons'
 
-// Define CourseSection interface to match actual data structure
-interface CourseSection {
+// Import the actual types from programData or define them to match exactly
+type CourseSection = {
   title: string;
-  modules: string[];
+  // Remove modules if it doesn't exist in your actual data
+  // modules: string[];
 }
 
-// Remove unused interfaces and use a single type definition
-type ProgramType = {
+type Program = {
   icon: IconType;
   title: string;
   description: string;
@@ -24,10 +24,9 @@ type ProgramType = {
   courses: CourseSection[];
 }
 
-type TrainingProgramsData = Record<string, ProgramType>;
-
 export default function TrainingProgramsPage() {
-  const programs = trainingPrograms as TrainingProgramsData;
+  // Remove the type assertion since we're using the actual type
+  const programs = trainingPrograms;
 
   return (
     <RootLayout>
