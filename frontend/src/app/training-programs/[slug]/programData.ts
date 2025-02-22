@@ -1,19 +1,18 @@
 // app/training-programs/[slug]/programData.ts
 import { IconType } from 'react-icons';
 import { 
-  FiBarChart, FiUsers, FiShield, FiTool, FiDatabase, 
-  FiCode, FiLayers, FiBriefcase, FiGlobe, FiCpu,
-  FiServer, FiCloud, FiLock, FiTrendingUp, FiBook,
-  FiAward, FiTarget, FiCheckCircle, FiDollarSign,
+  FiBarChart, FiShield, FiTool, FiDatabase, 
+  FiCode, FiCpu,
+  FiServer, FiCloud, FiLock, FiTrendingUp, 
+  FiAward, 
   FiMonitor, FiSettings, FiRefreshCw
 } from 'react-icons/fi';
 import { 
   FaRobot, FaBrain, FaChartLine, FaProjectDiagram,
   FaNetworkWired, FaDatabase, FaShieldAlt, FaCogs,
   FaGraduationCap, FaLaptopCode, FaChalkboardTeacher,
-  FaUserGraduate, FaCertificate, FaChartBar, FaCode,
-  FaServer, FaLock, FaCog
-} from 'react-icons/fa';
+  FaCertificate, FaChartBar, 
+  FaServer} from 'react-icons/fa';
 
 interface CourseSection {
   title: string;

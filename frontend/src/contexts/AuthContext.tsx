@@ -37,7 +37,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string) => {
     // TODO: Implement actual login
     setUser({ id: '1', email, name: 'Test User' })
   }

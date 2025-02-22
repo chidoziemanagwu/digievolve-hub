@@ -25,7 +25,7 @@ import { PiBuildingApartment, PiCertificateLight } from "react-icons/pi";
 import { GiArchiveResearch } from "react-icons/gi";
 import { FaGlobeAfrica, FaRegArrowAltCircleRight } from "react-icons/fa";
 import { CiMonitor } from "react-icons/ci";
-import { Suspense, useState, useEffect } from "react";
+import { Suspense, useState } from "react";
 import {
   FcAcceptDatabase,
   FcDataProtection,

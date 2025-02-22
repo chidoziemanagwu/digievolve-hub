@@ -2,15 +2,14 @@
 import { IconType } from 'react-icons';
 import {
   FiCommand, FiGrid, FiSearch, FiTarget, FiGlobe,
-  FiCloud, FiShield, FiUsers, FiDatabase, FiTrendingUp,
-  FiMonitor, FiSettings, FiLayers, FiServer, FiLock,
-  FiRefreshCw, FiSmartphone, FiBox, FiAward
-} from 'react-icons/fi';
+  FiCloud, FiShield, FiUsers, FiDatabase, 
+  FiMonitor, FiLayers
+  } from 'react-icons/fi';
 import {
-  FaRobot, FaBrain, FaChartLine, FaProjectDiagram,
-  FaNetworkWired, FaDatabase, FaShieldAlt, FaCogs,
-  FaLaptopCode, FaGraduationCap, FaUserGraduate,
-  FaPassport, FaFileAlt, FaLinkedin, FaHandshake
+  FaRobot, FaBrain, FaChartLine, 
+  
+  FaGraduationCap, 
+  FaPassport, FaFileAlt, FaHandshake
 } from 'react-icons/fa';
 
 interface ServiceFeature {

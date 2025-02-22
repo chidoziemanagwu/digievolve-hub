@@ -36,11 +36,13 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ courseId }) => {
             <h1 className="text-3xl font-bold text-gray-900 mb-4">{course.title}</h1>
             <p className="text-gray-600 mb-4">{course.description}</p>
             <div className="flex items-center space-x-4">
-              <img
-                src={course.instructor.avatar}
-                alt={course.instructor.name}
-                className="w-10 h-10 rounded-full"
-              />
+            <Image 
+  src={course.instructor.avatar} 
+  alt={course.instructor.name}
+  width={40}
+  height={40}
+  className="rounded-full"
+/>
               <div>
                 <p className="font-medium">{course.instructor.name}</p>
                 <p className="text-sm text-gray-500">{course.instructor.title}</p>

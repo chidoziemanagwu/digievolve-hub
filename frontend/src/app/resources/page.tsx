@@ -5,8 +5,8 @@ import RootLayout from '@/components/layout/RootLayout'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { 
-  FiBook, FiDownload, FiFileText, FiTool, 
-  FiVideo, FiBriefcase, FiGlobe, FiAward 
+  FiBook, FiFileText, FiTool, 
+  FiBriefcase, FiGlobe, FiAward 
 } from 'react-icons/fi'
 
 import Image from 'next/image'

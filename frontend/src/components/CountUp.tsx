@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { motion, useMotionValue, animate } from "framer-motion";
+import { useMotionValue, animate } from "framer-motion";
 
 const CountUp = ({ value, suffix = "" }) => {
   const [displayValue, setDisplayValue] = useState("0");

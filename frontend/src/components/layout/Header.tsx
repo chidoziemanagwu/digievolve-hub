@@ -2,9 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { FiMenu, FiX, FiChevronDown, FiGlobe, FiSearch, FiShield, FiTarget, FiTool } from 'react-icons/fi';
-import { FiCommand, FiGrid, FiBook, FiBarChart, FiShuffle, FiUsers, FiFile, FiMail } from 'react-icons/fi';
-import { FaRobot, FaGraduationCap } from 'react-icons/fa';
+import { FiMenu, FiChevronDown, FiGlobe, FiSearch, FiShield, FiTarget, FiTool } from 'react-icons/fi';
+import { FiCommand, FiGrid, FiBarChart, FiShuffle, FiUsers } from 'react-icons/fi';
+import { FaRobot } from 'react-icons/fa';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
