@@ -36,6 +36,7 @@ import {
 } from "react-icons/fc";
 import dynamic from 'next/dynamic';
 import { Carousel } from 'flowbite-react';
+import Image from 'next/image';
 
 
 const CountUp = dynamic(() => import('@/components/CountUp'), {
@@ -129,7 +130,7 @@ export default function Home() {
                 {" "}
                 {/* Added order-2 and responsive heights */}
                 <div className="col-span-2 rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src="/images/consulting-meeting.jpg"
                     alt="Digital Transformation Consulting"
                     className="w-full h-full object-cover"
@@ -138,7 +139,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src="/images/ai-visualization.jpg"
                     alt="AI and Machine Learning"
                     className="w-full h-full object-cover"
@@ -147,7 +148,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src="/images/digital-success.jpg"
                     alt="Global Training Solutions"
                     className="w-full h-full object-cover"
@@ -156,7 +157,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="col-span-2 rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src="/images/virtual-training.jpg"
                     alt="Business Innovation"
                     className="w-full h-full object-cover"
@@ -687,7 +688,7 @@ export default function Home() {
           {activeService === 1 && (
             <div className="h-full">
               <div className="h-64 relative">
-                <img
+                <Image
                   src="/images/digital-transform.jpg"
                   alt="Digital Transformation"
                   className="absolute inset-0 w-full h-full object-cover object-center"
@@ -737,7 +738,7 @@ export default function Home() {
           {activeService === 2 && (
             <div className="h-full">
               <div className="h-64 relative">
-                <img
+                <Image
                   src="/images/automation.jpg"
                   alt="Automation Solutions"
                   className="absolute inset-0 w-full h-full object-cover object-center"
@@ -787,7 +788,7 @@ export default function Home() {
           {activeService === 3 && (
             <div className="h-full">
               <div className="h-64 relative">
-                <img
+                <Image
                   src="/images/research.jpg"
                   alt="Research & Development"
                   className="absolute inset-0 w-full h-full object-cover object-center"
@@ -837,7 +838,7 @@ export default function Home() {
           {activeService === 4 && (
             <div className="h-full">
               <div className="h-64 relative">
-                <img
+                <Image
                   src="/images/career.jpg"
                   alt="Career Development"
                   className="absolute inset-0 w-full h-full object-cover object-center"
@@ -887,7 +888,7 @@ export default function Home() {
           {activeService === 5 && (
             <div className="h-full">
               <div className="h-64 relative">
-                <img
+                <Image
                   src="/images/global.jpg"
                   alt="Global Talent Solutions"
                   className="absolute inset-0 w-full h-full object-cover object-center"
@@ -1024,7 +1025,7 @@ export default function Home() {
             <div key={index} className="flex h-full items-center justify-center p-4">
               <div className="bg-white rounded-xl p-8 shadow-lg max-w-3xl mx-auto">
                 <div className="flex items-center mb-6">
-                  <img 
+                  <Image 
                     src={testimonial.image} 
                     alt={testimonial.name} 
                     className="w-16 h-16 rounded-full object-cover"

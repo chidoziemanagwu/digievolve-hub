@@ -1,7 +1,6 @@
 // frontend/src/app/about/page.tsx
 'use client'
 
-import { useState } from 'react';
 import RootLayout from '@/components/layout/RootLayout';
 import { FiTarget, FiBook, FiAward, FiUsers, FiGlobe } from 'react-icons/fi';
 import { motion } from 'framer-motion';

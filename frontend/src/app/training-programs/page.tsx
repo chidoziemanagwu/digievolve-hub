@@ -7,6 +7,20 @@ import Link from 'next/link'
 import { FiBarChart, FiClock, FiBook } from 'react-icons/fi'
 import { FaGraduationCap, FaLaptopCode } from 'react-icons/fa'
 import { trainingPrograms } from './[slug]/programData'
+import { IconType } from 'react-icons'
+
+// Add TypeScript interface for program
+interface Program {
+  icon: IconType;
+  title: string;
+  description: string;
+  duration: string;
+  courses: any[]; // Replace 'any' with proper type if available
+}
+
+interface TrainingPrograms {
+  [key: string]: Program;
+}
 
 export default function TrainingProgramsPage() {
   return (
@@ -14,8 +28,8 @@ export default function TrainingProgramsPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-gray-900 to-gray-800 text-white py-24">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-75"></div>
+          <div className="absolute inset-0 bg-black opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-75" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -35,12 +49,12 @@ export default function TrainingProgramsPage() {
             <h2 className="text-3xl font-semibold mb-6">Our Training Programs</h2>
             <p className="text-lg text-gray-600">
               Choose from our range of industry-leading programs designed to equip you 
-              with the skills needed in today's digital landscape.
+              with the skills needed in today&apos;s digital landscape.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(trainingPrograms).map(([slug, program]) => (
+            {Object.entries(trainingPrograms as TrainingPrograms).map(([slug, program]) => (
               <motion.div
                 key={slug}
                 initial={{ opacity: 0, y: 20 }}
@@ -49,7 +63,7 @@ export default function TrainingProgramsPage() {
               >
                 <div className="bg-amber-50 p-6">
                   <div className="flex items-center justify-center mb-4">
-                    {program.icon}
+                    {program.icon && <program.icon size={24} className="text-[#f2aa40]" />}
                   </div>
                   <h3 className="text-xl font-semibold text-center mb-2">
                     {program.title}

@@ -5,6 +5,9 @@ import Link from 'next/link';
 import { FiMenu, FiChevronDown, FiGlobe, FiSearch, FiShield, FiTarget, FiTool } from 'react-icons/fi';
 import { FiCommand, FiGrid, FiBarChart, FiShuffle, FiUsers } from 'react-icons/fi';
 import { FaRobot } from 'react-icons/fa';
+import Image from 'next/image';
+
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +45,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Brand Logo with Image */}
           <Link href="/" className="flex items-center space-x-2">
-            <img 
+            <Image 
               src="/logo.png"
               alt="DigiEvolve Hub Logo"
               className="h-10 w-auto"

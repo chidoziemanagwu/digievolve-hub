@@ -13,27 +13,27 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
+    files: ["**/*.{js,mjs,cjs,ts,tsx}"],
     rules: {
-      // Fix unescaped entities warnings
-      "react/no-unescaped-entities": "off",
-      
-      // Fix unused variables warnings
-      "@typescript-eslint/no-unused-vars": ["warn", {
+      // Critical errors
+      "@typescript-eslint/no-unused-vars": ["error", {
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^_",
-        "ignoreRestSiblings": true
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_"
       }],
+      "@next/next/no-img-element": "error",
       
-      // Fix img element warnings
-      "@next/next/no-img-element": "warn",
-      
-      // Additional rules for better code quality
+      // Disabled warnings
+      "react/no-unescaped-entities": "off",
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
+      
+      // React specific
       "react/jsx-uses-react": "off",
       "react/jsx-uses-vars": "error",
       
-      // Accessibility rules
+      // Accessibility
       "jsx-a11y/alt-text": "error",
       "jsx-a11y/aria-props": "error",
       "jsx-a11y/aria-proptypes": "error",

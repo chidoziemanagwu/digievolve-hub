@@ -5,7 +5,7 @@ import RootLayout from '@/components/layout/RootLayout'
 import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { FiClock, FiBook, FiDownload, FiArrowRight } from 'react-icons/fi'
+import { FiClock, FiDownload, FiArrowRight } from 'react-icons/fi'
 import { FaGraduationCap, FaLaptopCode, FaUserGraduate } from 'react-icons/fa'
 import { trainingPrograms } from './programData'
 

@@ -1,8 +1,7 @@
-import type { NextConfig } from "next";
-
+// next.config.ts
 const nextConfig = {
   images: {
-    domains: ['placehold.co'], // Add your image domains
+    domains: ['your-image-domain.com'], // Add your image domains
     remotePatterns: [
       {
         protocol: 'https',
