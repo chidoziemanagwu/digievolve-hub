@@ -49,6 +49,8 @@ export default function Header() {
               src="/logo.png"
               alt="DigiEvolve Hub Logo"
               className="h-10 w-auto"
+              width={150} // Adjust this value to match your logo's actual width
+              height={50} // Adjust this value to match your logo's actual height
             />
           </Link>
 

@@ -7,15 +7,6 @@ import Link from 'next/link'
 import { FiBarChart, FiClock, FiBook } from 'react-icons/fi'
 import { FaGraduationCap, FaLaptopCode } from 'react-icons/fa'
 import { trainingPrograms } from './[slug]/programData'
-import { IconType } from 'react-icons'
-
-// Import the actual types from programData or define them to match exactly
-type CourseSection = {
-  title: string;
-  // Remove modules if it doesn't exist in your actual data
-  // modules: string[];
-}
-
 
 
 export default function TrainingProgramsPage() {

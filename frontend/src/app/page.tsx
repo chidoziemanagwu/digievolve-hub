@@ -136,6 +136,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                     loading="eager" // Critical above-the-fold image
                     decoding="async"
+                    width={1200} // Adjust based on your actual image dimensions
+                    height={800} // Adjust based on your actual image dimensions
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden">
@@ -145,6 +147,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                     loading="eager" // Critical above-the-fold image
                     decoding="async"
+                    width={1200} // Adjust based on your actual image dimensions
+                    height={800} // Adjust based on your actual image dimensions
                   />
                 </div>
                 <div className="rounded-lg overflow-hidden">
@@ -154,6 +158,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                     loading="eager" // Critical above-the-fold image
                     decoding="async"
+                    width={1200} // Adjust based on your actual image dimensions
+                    height={800} // Adjust based on your actual image dimensions
                   />
                 </div>
                 <div className="col-span-2 rounded-lg overflow-hidden">
@@ -163,6 +169,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                     loading="eager" // Critical above-the-fold image
                     decoding="async"
+                    width={1200} // Adjust based on your actual image dimensions
+                    height={800} // Adjust based on your actual image dimensions
                   />
                 </div>
               </div>
@@ -694,6 +702,8 @@ export default function Home() {
                   className="absolute inset-0 w-full h-full object-cover object-center"
                   loading="eager" // Critical above-the-fold image
                   decoding="async"
+                  width={1200} // Adjust based on your actual image dimensions
+                  height={800} // Adjust based on your actual image dimensions
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                   <h4 className="text-white text-2xl font-semibold p-6">
@@ -1029,6 +1039,8 @@ export default function Home() {
                     src={testimonial.image} 
                     alt={testimonial.name} 
                     className="w-16 h-16 rounded-full object-cover"
+                    width={100} // Adjust based on your testimonial image size
+                    height={100} // Adjust based on your testimonial image size
                   />
                   <div className="ml-4">
                     <h4 className="text-xl font-semibold text-gray-900">{testimonial.name}</h4>
