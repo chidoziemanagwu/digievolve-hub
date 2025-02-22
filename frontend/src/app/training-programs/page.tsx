@@ -9,28 +9,23 @@ import { FaGraduationCap, FaLaptopCode } from 'react-icons/fa'
 import { trainingPrograms } from './[slug]/programData'
 import { IconType } from 'react-icons'
 
-// Define Course interface
-interface Course {
-  id: string;
+// Define CourseSection interface to match actual data structure
+interface CourseSection {
   title: string;
-  description: string;
-  duration: string;
-  level: string;
-  topics: string[];
+  modules: string[];
 }
 
-// Update Program interface with proper Course type
 interface Program {
   icon: IconType;
   title: string;
   description: string;
   duration: string;
-  courses: Course[];
+  courses: CourseSection[];
 }
 
-interface TrainingPrograms {
-  [key: string]: Program;
-}
+// Use the actual type from programData
+type TrainingPrograms = typeof trainingPrograms;
+
 export default function TrainingProgramsPage() {
   return (
     <RootLayout>
@@ -63,7 +58,7 @@ export default function TrainingProgramsPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(trainingPrograms as TrainingPrograms).map(([slug, program]) => (
+            {Object.entries(trainingPrograms).map(([slug, program]) => (
               <motion.div
                 key={slug}
                 initial={{ opacity: 0, y: 20 }}
