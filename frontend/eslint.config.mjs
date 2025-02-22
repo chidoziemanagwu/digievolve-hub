@@ -22,6 +22,10 @@ const eslintConfig = [
         "caughtErrorsIgnorePattern": "^_",
         "destructuredArrayIgnorePattern": "^_"
       }],
+      "@typescript-eslint/no-explicit-any": ["error", {
+        "ignoreRestArgs": true,
+        "fixToUnknown": true
+      }],
       "@next/next/no-img-element": "error",
       
       // Disabled warnings

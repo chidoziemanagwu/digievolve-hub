@@ -9,19 +9,28 @@ import { FaGraduationCap, FaLaptopCode } from 'react-icons/fa'
 import { trainingPrograms } from './[slug]/programData'
 import { IconType } from 'react-icons'
 
-// Add TypeScript interface for program
+// Define Course interface
+interface Course {
+  id: string;
+  title: string;
+  description: string;
+  duration: string;
+  level: string;
+  topics: string[];
+}
+
+// Update Program interface with proper Course type
 interface Program {
   icon: IconType;
   title: string;
   description: string;
   duration: string;
-  courses: any[]; // Replace 'any' with proper type if available
+  courses: Course[];
 }
 
 interface TrainingPrograms {
   [key: string]: Program;
 }
-
 export default function TrainingProgramsPage() {
   return (
     <RootLayout>
