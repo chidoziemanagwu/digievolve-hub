@@ -9,6 +9,9 @@ import {
   FiVideo, FiBriefcase, FiGlobe, FiAward 
 } from 'react-icons/fi'
 
+import Image from 'next/image'
+
+
 const resourceCategories = [
   {
     title: "Learning Materials",
@@ -125,7 +128,13 @@ export default function ResourcesPage() {
       <section className="relative bg-gradient-to-b from-gray-900 to-gray-800 text-white py-24">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-75"></div>
+          <Image
+            src="/learning-resources.jpg" // Add an image showing a modern office or tech workspace
+            alt="Contact Us"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">

@@ -28,20 +28,20 @@ export default function ServicePage() {
   return (
     <RootLayout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-900 to-gray-800 text-white py-24">
+      <section className="relative bg-gradient-to-b from-amber-400 to-white text-black py-24">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-75"></div>
+          <div className="absolute inset-0 bg-gray opacity-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-amber-400 to-white opacity-75"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-6">
-              <div className="bg-white/10 p-4 rounded-full">
+              <div className="bg-white p-4 rounded-full">
                 <IconComponent className="w-12 h-12 text-[#f2aa40]" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{service.title}</h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <h1 className="text-4xl md:text-5xl font-normal mb-6">{service.title}</h1>
+            <p className="text-xl text-black  mb-8">
               {service.description}
             </p>
           </div>

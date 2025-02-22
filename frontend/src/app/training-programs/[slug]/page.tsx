@@ -29,34 +29,34 @@ export default function TrainingProgramPage() {
   return (
     <RootLayout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-900 to-gray-800 text-white py-24">
+      <section className="relative bg-gradient-to-b from-amber-400 to-white text-white py-24">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-75"></div>
+          <div className="absolute inset-0  opacity-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-amber-400 to-white opacity-75"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-6">
-              <div className="bg-white/10 p-4 rounded-full">
+              <div className="bg-white p-4 rounded-full">
                 <IconComponent className="w-12 h-12 text-[#f2aa40]" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{program.title}</h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <h1 className="text-4xl md:text-5xl font-normal mb-6 text-black">{program.title}</h1>
+            <p className="text-xl text-black mb-8">
               {program.description}
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <div className="flex items-center">
-                <FiClock className="text-[#f2aa40] mr-2" />
-                <span>{program.duration}</span>
+              <div className="flex items-center bg-white rounded-full px-3 py-2">
+                <FiClock className="text-[#f2aa40] mr-2 font-bold" />
+                <span className='text-black'>{program.duration}</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center bg-white rounded-full px-3 py-2">
                 <FaGraduationCap className="text-[#f2aa40] mr-2" />
-                <span>Industry Certification</span>
+                <span className='text-black'>Industry Certification</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center bg-white rounded-full px-3 py-2">
                 <FaLaptopCode className="text-[#f2aa40] mr-2" />
-                <span>Hands-on Training</span>
+                <span className='text-black'>Hands-on Training</span>
               </div>
             </div>
           </div>
