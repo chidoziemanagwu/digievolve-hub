@@ -1,6 +1,6 @@
 'use client'
 // src/app/page.tsx
-import RootLayout from "../components/layout/RootLayout";
+import RootLayout from "@/components/layout/RootLayout";
 import Link from "next/link";
 import { ImEnter } from "react-icons/im";
 import {

@@ -39,10 +39,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production node .next/standalone/server.js",
-    "lint": "next lint",
-    "clean": "rm -rf .next node_modules",
-    "prebuild": "npm run clean && npm install"
+    "build": "next build",
+    "start": "next start",
+    "clean": "rm -rf .next node_modules/.cache",
+    "prebuild": "npm run clean"
   }
 }
