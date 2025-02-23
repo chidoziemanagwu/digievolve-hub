@@ -21,7 +21,7 @@ import {
   FiSearch,
   FiBookOpen,
 } from "react-icons/fi";
-import { PiBuildingApartment, PiCertificateLight } from "react-icons/pi";
+import { PiBuildings, PiCertificateLight } from "react-icons/pi";
 import { GiArchiveResearch } from "react-icons/gi";
 import { FaGlobeAfrica, FaRegArrowAltCircleRight } from "react-icons/fa";
 import { CiMonitor } from "react-icons/ci";
@@ -91,7 +91,6 @@ export default function Home() {
           <section className="text-center py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-8 px-2 text-center lg:py-16">
               {" "}
-              {/* Changed grid-cols-2 to grid-cols-1 with md:grid-cols-2 */}
               {/* Left section with welcome text */}
               <div className="flex flex-col justify-center h-full order-1">
                 {" "}
@@ -189,7 +188,7 @@ export default function Home() {
                   Business Solutions
                 </li>
                 <li className="flex items-center justify-center flex-1 px-6 py-10 border-b md:border-b-0 md:border-r border-[#ffffff40]">
-                  <PiBuildingApartment className="mr-3 text-2xl md:text-3xl" />
+                  <PiBuildings className="mr-3 text-2xl md:text-3xl" />
                   Enterprise
                 </li>
                 <li className="flex items-center justify-center flex-1 px-6 py-10 border-b md:border-b-0 md:border-r border-[#ffffff40]">
@@ -989,7 +988,7 @@ export default function Home() {
         {/* Industry Partners */}
         <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
           <div className="flex items-center justify-center mb-4">
-            <PiBuildingApartment className="text-4xl text-amber-500" />
+            <PiBuildings className="text-4xl text-amber-500" />
           </div>
           <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 text-center">
             <CountUp value={50} />+
