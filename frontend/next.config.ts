@@ -16,7 +16,16 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Add headers for security and CORS
+  // Add webpack configuration
+  webpack: (config) => {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      "punycode": false
+    };
+    return config;
+  },
+
+  // Headers configuration
   async headers() {
     return [
       {
@@ -42,7 +51,8 @@ const nextConfig: NextConfig = {
   experimental: {
     serverActions: {
       allowedOrigins: ['whale-app-j37an.ondigitalocean.app'],
-    }
+    },
+    typedRoutes: true,
   }
 }
 
