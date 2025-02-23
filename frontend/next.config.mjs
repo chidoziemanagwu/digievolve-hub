@@ -1,9 +1,7 @@
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'standalone',
   
-  // Optimize production builds
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
@@ -19,18 +17,15 @@ const nextConfig: NextConfig = {
         hostname: 'whale-app-j37an.ondigitalocean.app',
       }
     ],
-    // Optimize image handling
     unoptimized: process.env.NODE_ENV === 'development',
   },
 
-  // Webpack configuration
   webpack: (config, { isServer }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       "punycode": false
     };
     
-    // Optimize bundle size
     if (!isServer) {
       config.optimization = {
         ...config.optimization,
@@ -46,7 +41,6 @@ const nextConfig: NextConfig = {
     return config;
   },
 
-  // Headers configuration
   async headers() {
     return [
       {
@@ -83,6 +77,6 @@ const nextConfig: NextConfig = {
     },
     typedRoutes: true,
   }
-}
+};
 
-export default nextConfig
+export default nextConfig;
