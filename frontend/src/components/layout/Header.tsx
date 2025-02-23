@@ -46,7 +46,7 @@ export default function Header() {
           {/* Brand Logo with Image */}
           <Link href="/" className="flex items-center space-x-2">
             <Image 
-              src="/logo.png"
+              src="/images/logo.png"
               alt="DigiEvolve Hub Logo"
               className="h-10 w-auto"
               width={150} // Adjust this value to match your logo's actual width

@@ -72,10 +72,7 @@ const nextConfig = {
   },
 
   experimental: {
-    serverActions: {
-      allowedOrigins: ['whale-app-j37an.ondigitalocean.app'],
-    },
-    typedRoutes: true,
+    typedRoutes: true
   }
 };
 
