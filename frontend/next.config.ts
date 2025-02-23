@@ -3,15 +3,6 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   output: 'standalone',
   
-  // Ensure static assets are copied
-  experimental: {
-    outputFileTracingRoot: undefined, // Includes all files
-    serverActions: {
-      allowedOrigins: ['whale-app-j37an.ondigitalocean.app'],
-    }
-  },
-
-  // Configure images
   images: {
     remotePatterns: [
       {
@@ -25,14 +16,34 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Production optimizations
-  poweredByHeader: false,
-  compress: true,
-
-  // Ensure public directory is copied
-  typescript: {
-    ignoreBuildErrors: false,
+  // Add headers for security and CORS
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: 'https://whale-app-j37an.ondigitalocean.app',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+        ],
+      },
+    ]
   },
+
+  experimental: {
+    serverActions: {
+      allowedOrigins: ['whale-app-j37an.ondigitalocean.app'],
+    }
+  }
 }
 
 export default nextConfig
