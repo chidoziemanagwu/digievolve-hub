@@ -1,14 +1,26 @@
-// next.config.ts
-const nextConfig = {
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   images: {
-    domains: ['your-image-domain.com'], // Add your image domains
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: '*',
       },
     ],
   },
-};
+  // Configure server runtime
+  serverRuntimeConfig: {
+    port: process.env.PORT || 10000,
+  },
+  // Enable experimental features if needed
+  experimental: {
+    // Correctly configure server actions
+    serverActions: {
+      allowedOrigins: ['*'],
+      bodySizeLimit: '2mb'
+    }
+  }
+}
 
-export default nextConfig;
+export default nextConfig
