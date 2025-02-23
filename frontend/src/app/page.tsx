@@ -1,6 +1,6 @@
 'use client'
 // src/app/page.tsx
-import RootLayout from "@/components/layout/RootLayout";
+import RootLayout from "../components/layout/RootLayout";
 import Link from "next/link";
 import { ImEnter } from "react-icons/im";
 import {
@@ -252,7 +252,7 @@ export default function Home() {
                         to drive innovation.
                       </p>
                       <Link
-                        href=""
+                        href="#"
                         className="inline-flex items-center gap-2 border border-[#f2aa40] text-[#f2aa40] px-5 py-2 rounded-lg transition-all hover:bg-[#f2aa40] hover:text-white group text-sm"
                       >
                         See More
@@ -289,7 +289,7 @@ export default function Home() {
                         evolution.
                       </p>
                       <Link
-                        href=""
+                        href="#"
                         className="inline-flex items-center gap-2 border border-[#f2aa40] text-[#f2aa40] px-5 py-2 rounded-lg transition-all hover:bg-[#f2aa40] hover:text-white group text-sm"
                       >
                         Learn More
@@ -327,7 +327,7 @@ export default function Home() {
                         industry-recognized certifications with expert guidance.
                       </p>
                       <Link
-                        href=""
+                        href="#"
                         className="inline-flex items-center gap-2 border border-[#f2aa40] text-[#f2aa40] px-5 py-2 rounded-lg transition-all hover:bg-[#f2aa40] hover:text-white group text-sm"
                       >
                         Explore Programs
