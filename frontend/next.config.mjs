@@ -1,4 +1,4 @@
-import path from 'path/posix';
+import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -19,7 +19,7 @@ const nextConfig = {
 
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': path.resolve(process.cwd(), 'src'),
+      '@': path.resolve(__dirname, 'src'),
     };
 
     return config;
