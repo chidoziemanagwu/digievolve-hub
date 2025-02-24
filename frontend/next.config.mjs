@@ -10,6 +10,7 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+    formats: ['image/avif', 'image/webp'],
   },
   webpack: (config) => {
     config.module.rules.push({
@@ -24,6 +25,12 @@ const nextConfig = {
 
     return config;
   },
+  devIndicators: {
+    autoPrune: false,
+    buildActivity: true,
+  },
+  assetPrefix: '',
+  telemetry: false,
 };
 
 export default nextConfig;
