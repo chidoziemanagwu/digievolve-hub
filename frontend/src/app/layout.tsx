@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+import { Inter } from 'next/font/google';
 import "./globals.css";
 
-// Configure Geist fonts
-const geistSans = GeistSans;
-const geistMono = GeistMono;
+// Initialize Inter font
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 // Default metadata configuration
 export const metadata: Metadata = {
@@ -17,9 +18,8 @@ export const metadata: Metadata = {
   keywords: ["digital transformation", "training", "consulting", "data analytics", "AI", "machine learning"],
   authors: [{ name: "DigiEvolve Hub" }],
   creator: "DigiEvolve Hub",
-  metadataBase: new URL('https://your-domain.com'), // Replace with your actual domain
+  metadataBase: new URL('https://your-domain.com'),
   
-  // Updated favicon configuration
   icons: {
     icon: [
       {
@@ -47,8 +47,6 @@ export const metadata: Metadata = {
       }
     ]
   },
-
-  // Rest of your metadata configuration
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -79,9 +77,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+<html lang="en" className={inter.className}>
       <head>
-        {/* Force favicon */}
         <link rel="icon" href="/images/logo.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/images/logo.png" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" href="/images/logo.png" sizes="180x180" />

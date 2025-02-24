@@ -1,14 +1,22 @@
-// next.config.ts
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['your-image-domain.com'], // Add your image domains
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
-      },
+      }
     ],
+    domains: ['localhost'],
   },
+  // Add webpack configuration for fonts
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      type: 'asset/resource',
+    });
+    return config;
+  }
 };
 
 export default nextConfig;
