@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'path/posix';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
