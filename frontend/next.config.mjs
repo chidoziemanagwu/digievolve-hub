@@ -1,4 +1,4 @@
-import path from 'path/posix';
+import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -30,7 +30,6 @@ const nextConfig = {
     buildActivity: true,
   },
   assetPrefix: '',
-  telemetry: false,
 };
 
 export default nextConfig;
